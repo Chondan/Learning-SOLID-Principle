@@ -67,5 +67,12 @@ The main idea of the interface segregation principle is that any class that impl
 ---
 
 ## Dependency inversion principle
-In object-oriented design, the **dependency inversion principle** is a specific form of decoupling software modules.
+In object-oriented design, the **dependency inversion principle** is a specific form of decoupling software modules. When following this principle, the conventional dependency relationships established from high-level, policy-setting modules to low-level, dependency modules are reversed, thus redering high-level modules independent of the low-level module implementation details.
 
+The principle states:
+- High-level modules shoudl not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).
+- Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+
+The main idea of the dependency inversion principle is that any class that uses a dependency should only ever use the dependency through a predefined interface/wrapper. This makes it so that your code will never directly depend on a low level API for its operations. The reason this is so important is because if you ever need to change or remove that dependency it becomes really difficult when it is used all over your code. By wrapping this dependency in an interface you can depend on the interface you created which will make changing out the dependency painless.
+
+---
